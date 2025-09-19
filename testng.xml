@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TBC Digital Automation Suite" parallel="tests" thread-count="3">
+
+    <!-- Desktop Suite -->
+    <test name="Desktop Tests - Chromium">
+        <parameter name="browserName" value="chromium"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.LocationsTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.LoanPageTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.PersonalMenuTest"/>
+        </classes>
+    </test>
+
+    <test name="Desktop Tests - Firefox">
+        <parameter name="browserName" value="firefox"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.LocationsTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.LoanPageTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.PersonalMenuTest"/>
+        </classes>
+    </test>
+
+    <test name="Desktop Tests - WebKit">
+        <parameter name="browserName" value="webkit"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.LocationsTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.LoanPageTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.PersonalMenuTest"/>
+        </classes>
+    </test>
+
+    <!-- Mobile Suite -->
+    <test name="Mobile Tests - iPhone 12">
+        <parameter name="browserName" value="chromium"/>
+        <parameter name="deviceName" value="iPhone 12"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.LocationsTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.LoanPageTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.PersonalMenuTest"/>
+        </classes>
+    </test>
+
+</suite>
